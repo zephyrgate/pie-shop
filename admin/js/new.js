@@ -1,8 +1,8 @@
-let onSubmitNewPie = (event) => {
+let onSubmitNewPie = async (event) => {
     event.preventDefault();
     let form = event.target;
 
-    getPies();
+    await getPies();
     let ingredients = [];
     form.querySelectorAll('div.ingredient').forEach((ingredient) => {
         ingredients.push({
@@ -12,7 +12,7 @@ let onSubmitNewPie = (event) => {
         });
     });
 
-    addPie(new Pie(
+    await addPie(new Pie(
         form.querySelector('#inputName').value,
         form.querySelector('#inputSmallDescription').value,
         form.querySelector('#textareaLongDescription').value,

@@ -1,9 +1,9 @@
 let doDeletePieButtonListener;
 
-let init = () => {
+let init = async () => {
     doDeletePieButtonListener = null;
-    getPies();
-    displayPies();
+    await getPies();
+    await displayPies();
     addListenersUpdateButtons();
     addListenersDeleteButtons();
 };
@@ -22,9 +22,10 @@ let getHtmlTableRow = (pie) => {
     </tr>`;
 };
 
-let displayPies = () => {
+let displayPies = async () => {
     let linesTable = '';
-    let pies = getPiesLocal();
+    let pies = await getPies();
+    console.log(pies);
     pies.forEach((pie) => linesTable += getHtmlTableRow(pie));
 
     document.querySelector('table.pie-table tbody').innerHTML = linesTable;

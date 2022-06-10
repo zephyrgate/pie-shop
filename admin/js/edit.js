@@ -1,5 +1,5 @@
-let init = () => {
-    getPies();
+let init = async () => {
+    await getPies();
     fillInputs();
     let form = document.querySelector('form.update-form');
     let ingredientsInputs = form.querySelector('.ingredients-inputs');
@@ -97,7 +97,7 @@ let onClickRemoveIngredientButton = (event) => {
     }
 }
 
-let onSubmitUpdatePie = (event) => {
+let onSubmitUpdatePie = async (event) => {
     event.preventDefault();
     let form = event.target;
 
@@ -118,7 +118,8 @@ let onSubmitUpdatePie = (event) => {
     pie.image = form.querySelector('#inputImage').value;
     pie.price = parseFloat(form.querySelector('#inputPrice').value);
 
-    updatePie(pie);
+    console.log(pie);
+    await updatePie(pie);
     window.location.href = "list.html";
 };
 

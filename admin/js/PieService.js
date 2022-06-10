@@ -1,8 +1,39 @@
 let _pies = [];
+let serverURL = "http://localhost:3000/pies";
 
-let addPie = (pie) => {
+let postData = async (url = '', data = {}) => {
+    // Default options are marked with *
+    const response = await fetch(url, {
+      method: 'POST',
+      mode: 'cors', // no-cors, *cors, same-origin
+      cache: 'no-cache', // *default, no-cache, reload, force-cache, only-if-cached
+      credentials: 'same-origin', // include, *same-origin, omit
+      headers: {
+        'Content-Type': 'application/json'
+        // 'Content-Type': 'application/x-www-form-urlencoded',
+      },
+      redirect: 'follow', // manual, *follow, error
+      referrerPolicy: 'no-referrer', // no-referrer, *no-referrer-when-downgrade, origin, origin-when-cross-origin, same-origin, strict-origin, strict-origin-when-cross-origin, unsafe-url
+      body: JSON.stringify(data) // body data type must match "Content-Type" header
+    });
+
+    return response.json(); // parses JSON response into native JavaScript objects
+};
+
+let putData = async (pie) => {
+    await fetch(`${serverURL}/${pie.id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify(pie),
+    });
+}
+
+let addPie = async (pie) => {
     _pies.push(pie);
-    savePies(_pies);
+    await postData(serverURL, pie)
+        // .then()
 };
 
 let removePie = (id) => {
@@ -10,25 +41,17 @@ let removePie = (id) => {
     savePies(_pies);
 };
 
-let updatePie = (updatedPie) => {
+let updatePie = async (updatedPie) => {
     _pies.forEach((pie, index) => {
         if (pie.id === updatedPie.id) {
             _pies[index] = updatedPie;
         }
     });
-    savePies(_pies);
+    await putData(updatedPie);
 };
 
-let getPies = () => {
-    if ('pies' in localStorage) {
-        _pies = readPies();
-        Pie.id = _pies[_pies.length - 1].id + 1;
-    } else {
-        Pie.id = 1;
-        addPie(new Pie("Apple pie", "Our famous apple pies!", "Sweet ice cream jelly beans lemon drops. Pastry toffee fruitcake gingerbread jelly-o. Lollipop sesame snaps muffin. Macaroon halvah marshmallow sesame snaps sugar plum dragée. Wafer pudding sesame snaps tootsie roll sesame snaps cake chupa chups jelly beans.", "Sugar, Apples", "applepie.jpg", 14.90));
-        addPie(new Pie("Blueberry cheese cake", "A Christmas favorite", "Sweet ice cream jelly beans lemon drops. Pastry toffee fruitcake gingerbread jelly-o. Lollipop sesame snaps muffin. Macaroon halvah marshmallow sesame snaps sugar plum dragée. Wafer pudding sesame snaps tootsie roll sesame snaps cake chupa chups jelly beans.", "Sugar, Blueberries", "blueberrycheesecakesmall.jpg", 12.90));
-        addPie(new Pie("Cheese cake", "Plain cheese cake. Plain pleasure.", "Sweet ice cream jelly beans lemon drops. Pastry toffee fruitcake gingerbread jelly-o. Lollipop sesame snaps muffin. Macaroon halvah marshmallow sesame snaps sugar plum dragée. Wafer pudding sesame snaps tootsie roll sesame snaps cake chupa chups jelly beans.", "Sugar, Cottage cheese", "cheesecakesmall.jpg", 16.20));
-    }
+let getPies = async () => {
+    _pies = await readPies();
 
     return _pies;
 };
