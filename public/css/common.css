@@ -1,0 +1,26 @@
+body {
+    background: url('../images/pattern.png') repeat;
+}
+
+.container.container-bethany {
+    max-width: 900px;
+}
+
+.bg-bethany {
+    background-color: #ab7cfc;
+}
+
+.btn.btn-primary.btn-bethany {
+    background-color: #ab7cfc;
+    border-color: #ab7cfc;
+}
+
+.card.card-bethany {
+    background: transparent !important;
+    border: unset;
+}
+
+.thumbnail-xsmall-img {
+    width: 45px;
+    height: 45px;
+}

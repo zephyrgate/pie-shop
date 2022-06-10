@@ -1,0 +1,49 @@
+.banner {
+    background-image: url('../images/carousel3.jpg');
+    background-size: cover;
+    background-position: 20% 20%;
+    height: 350px;
+    padding: 50px 10vw;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+@media screen and (max-width: 767.98px) {
+    .banner h1 {
+        font-size: 2rem;
+    }
+}
+
+.container.container-form {
+    max-width: 600px;
+}
+
+h2.form-title {
+    font-size: 3rem;
+    font-weight: 200;
+    text-align: center;
+}
+
+.shipping-label {
+    font-size: 0.7rem;
+}
+
+.table-cart th {
+    min-width: 150px;
+}
+
+.table-cart td.min-width-200 {
+    min-width: 200px;
+}
+
+input.form-control.item-count {
+    width: 3rem;
+}
+
+button.remove-one, button.add-one {
+    width: 2.5rem;
+}

@@ -1,0 +1,23 @@
+.welcome-carousel-image1 {
+    background-image: url('../images/carousel1.jpg');
+}
+
+.welcome-carousel-image2 {
+    background-image: url('../images/carousel2.jpg');
+}
+
+.welcome-carousel-image3 {
+    background-image: url('../images/carousel3.jpg');
+}
+
+.carousel-inner-bethany .carousel-item {
+    box-shadow: inset 0 0 0 100vw rgb(0 0 0 / 30%);
+}
+
+.carousel-item {
+    height: 32rem;
+    max-width: 100vw;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+  }

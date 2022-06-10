@@ -1,0 +1,82 @@
+@startuml
+'https://plantuml.com/class-diagram
+
+abstract class Utilisateur
+class Client
+class Admin
+class Commande
+class Gateau
+class Ingredient
+class Recette
+class LigneRecette
+class Panier
+class LignePanier
+abstract class ModePaiement
+class CarteBancaire
+
+Utilisateur <|-- Admin
+Utilisateur <|-- Client
+ModePaiement <|-- CarteBancaire
+Gateau *-- Recette
+Client *-- Panier
+Client *-- Commande
+LigneRecette o-- Ingredient
+Panier o-- Gateau
+Commande o-- Gateau
+ModePaiement o-- Client
+(Gateau, Recette) . LigneRecette
+(Panier, Gateau) . LignePanier
+(Commande, Gateau) . LignePanier
+
+abstract class Utilisateur {
+- email : String
+- password : String
+}
+
+class Client {
+- adresse : String
+- ville : String
+- codePostal : String
+- pays : String
+- modePaiement : ModePaiement
+}
+
+class Gateau {
+- prix : int
+- recette : Recette
+}
+
+class LigneRecette {
+- ingredient : Ingredient
+- quantite : int
+}
+
+class LignePanier {
+- gateau : Gateau
+- quantite : int
+}
+
+class Panier {
+- lignes : LignePanier[]
+}
+
+class Commande {
+- lignes : LignePanier[]
+- modePaiement : ModePaiement
+}
+
+class Recette {
+- lignes : LigneRecette[]
+}
+
+class Ingredient {
+- risque : int
+}
+
+abstract class ModePaiement {
+}
+
+class CarteBancaire {
+- numero : String
+}
+@enduml

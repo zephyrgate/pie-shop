@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethany's Pie Shop</title>
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/common.css">
+    <link rel="stylesheet" href="css/order.css">
+    <link rel="icon" type="image/png" href="images/pie.png">
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-dark bg-bethany">
+            <div class="container container-bethany">
+                <a class="navbar-brand" href="index.html">
+                    <img src="images/pie.png" alt="" width="30" height="24" class="d-inline-block align-text-top">
+                    Bethany's Pie Shop
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarNavDropdown">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="index.html">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="products.html">
+                          Tartes
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active" href="order.html">Commander</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
+        </nav>
+        <div class="banner">
+            <h1>Achetez des tartes svp &#x1f967;</h1>
+        </div>
+    </header>
+    <main class="container container-form mt-5">
+        <h2 class="form-title">Votre panier</h2>
+        <div class="container d-flex justify-content-center">
+            <table class="table table-hover table-bordered mt-3 mb-5 table-cart">
+                <thead class="d-none">
+                    <th class="text-center">Image</th>
+                    <th class="text-center">Article</th>
+                    <th class="text-center">Prix unitaire</th>
+                    <th class="text-center">Quantité</th>
+                    <th class="text-center">Sous-total</th>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+        <h2 class="form-title">Vos informations</h2>
+        <form class="row g-3 mt-2 mb-5">
+            <div class="col-md-6">
+              <label for="inputFirstName" class="form-label">Prénom</label>
+              <input type="text" class="form-control" id="inputFirstName4" placeholder="Votre prénom">
+            </div>
+            <div class="col-md-6">
+              <label for="inputLastName" class="form-label">Nom</label>
+              <input type="text" class="form-control" id="inputLastName4" placeholder="Votre nom">
+            </div>
+            <div class="col-12">
+                <label class="form-label" for="autoSizingInputGroup">Email</label>
+                <div class="input-group">
+                  <div class="input-group-text">@</div>
+                  <input type="text" class="form-control" id="autoSizingInputGroup" placeholder="Votre email">
+                </div>
+            </div>
+            <div class="col-12">
+              <label for="inputAddress2" class="form-label">Adresse</label>
+              <input type="text" class="form-control" id="inputAddress2" placeholder="Votre adresse">
+            </div>
+            <div class="col-md-6">
+                <label for="inputZipCode4" class="form-label">Code postal</label>
+                <input type="text" class="form-control" id="inputZipCode4" placeholder="Votre code postal">
+            </div>
+            <div class="col-md-6">
+                <label for="inputCity4" class="form-label">Ville</label>
+                <input type="text" class="form-control" id="inputCity4" placeholder="Votre ville">
+            </div>
+            <div class="col-md-5">
+                <label for="inputState" class="form-label">Département</label>
+                <select id="inputState" class="form-select">
+                    <option selected>Votre département...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-md-5">
+                <label for="inputCountry" class="form-label">Pays</label>
+                <select id="inputCountry" class="form-select">
+                    <option selected>Votre pays...</option>
+                    <option>...</option>
+                </select>
+            </div>
+            <div class="col-12">
+                <label for="inputCountry" class="form-label">Commentaires</label>
+                <textarea class="form-control" placeholder=""></textarea>
+            <div class="col-12 mt-2">
+              <div class="form-check">
+                <input class="form-check-input" type="checkbox" id="gridCheck">
+                <label class="form-check-label shipping-label" for="gridCheck">
+                  Se souvenir de mes informations
+                </label>
+              </div>
+            </div>
+            <div class="col-12 mt-4">
+              <button type="submit" class="btn btn-success text-center w-100">Passer commande !!!</button>
+            </div>
+          </form>
+    </main>
+</body>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js" integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2" crossorigin="anonymous"></script>
+<script src="../admin/js/DAO.js"></script>
+<script src="../admin/js/Pie.js"></script>
+<script src="../admin/js/PieService.js"></script>
+<script src="js/cart.js"></script>
+<script src="js/order.js"></script>
+</html>

@@ -1,0 +1,33 @@
+@startuml
+'https://plantuml.com/use-case-diagram
+left to right direction
+actor Admin
+actor Client
+
+
+rectangle "Pie Shop" {
+    usecase "Gérer le catalogue des gâteaux" as UC1
+    usecase "Ajouter un gâteau" as UC2
+    usecase "Modifier un gâteau" as UC3
+    usecase "Consulter un gâteau" as UC4
+    usecase "Supprimer un gâteau" as UC5
+    usecase "Consulter le catalogue des gâteaux" as UC6
+    usecase "Ajouter un gâteau au panier" as UC7
+    usecase "Valider la commande" as UC8
+    usecase "Payer" as UC9
+    usecase "S'authentifier" as UC10
+    UC1 .> UC2 : include
+    UC1 ..> UC10 : include
+    UC3 .> UC1 : extends
+    UC4 .> UC1 : extends
+    UC5 .> UC1 : extends
+    UC7 .> UC6 : extends
+    UC8 .> UC7 : extends
+    UC9 .> UC8 : include
+    UC8 .> UC10 : include
+}
+
+Admin -> UC1
+Client --> UC6
+
+@enduml

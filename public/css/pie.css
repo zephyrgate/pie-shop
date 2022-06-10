@@ -1,0 +1,51 @@
+.banner {
+    background-image: url('../images/products/applepie.jpg');
+    background-size: cover;
+    background-position: 20% 20%;
+    height: 350px;
+    padding: 50px 10vw;
+}
+
+.banner h1 {
+    color: white;
+    font-size: 4rem;
+    font-weight: 200;
+}
+
+.pie-title-desc {
+    display: flex;
+}
+
+.pie-title-desc p {
+    font-size: 1.6rem;
+    margin-left: 0.5rem;
+}
+
+.pie-info .pie-image {
+    width: 100%;
+}
+
+.pie-price-cta {
+    display: flex;
+    justify-content: space-between;
+}
+
+.pie-price-cta .pie-price {
+    font-weight: 600;
+}
+
+.pie-quote {
+    padding: 1.5rem 2rem;
+    background: white;
+    border: 2px solid #ab7cfc;
+    border-radius: 3px;
+}
+
+.pie-quote p {
+    font-style: italic;
+}
+
+.suggestion-pie-image {
+    height: 240px;
+    width: 320px;
+}
