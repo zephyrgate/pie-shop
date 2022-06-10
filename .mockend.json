@@ -1,5 +1,142 @@
 {
-    "User": {
-      "title": { "string": {} }
-    }
+    "Pie": [
+        {
+            "id": 1,
+            "name": "Tarte aux pommes",
+            "smallDescription": "#TeamApplePie🍎🍏",
+            "longDescription": "La tarte aux pommes est un type de tarte sucrée, faite d'une pâte feuilletée ou brisée garnie de pommes émincées. Cette tarte peut être consommée chaude, tiède ou froide. C'est la tarte officielle de l'État du Vermont, aux États-Unis.",
+            "ingredients": [
+                {
+                    "name": "Pommes",
+                    "qty": "12",
+                    "risk": "Non"
+                },
+                {
+                    "name": "Sucre",
+                    "qty": "300 g",
+                    "risk": "Non"
+                }
+            ],
+            "image": "applepie.jpg",
+            "price": 14.98
+        },
+        {
+            "id": 4,
+            "name": "Tarte aux fraises",
+            "smallDescription": "Une tarte super.",
+            "longDescription": "La tarte aux fraises est un aliment de dessert composé principalement de fraises.",
+            "ingredients": [
+                {
+                    "name": "Sucre",
+                    "qty": "300 g",
+                    "risk": "Non"
+                },
+                {
+                    "name": "Crème",
+                    "qty": "200 g",
+                    "risk": "Oui"
+                },
+                {
+                    "name": "Fraises",
+                    "qty": "42",
+                    "risk": "Oui"
+                }
+            ],
+            "image": "tartefraise.jpg",
+            "price": 14.5
+        },
+        {
+            "id": 6,
+            "name": "Tarte aux pêches",
+            "smallDescription": "Une tarte aux pêches",
+            "longDescription": "La tarte aux pêches, c'est LE dessert qui sent bon l'été. Pêches blanches, pêches jaunes ou pêches de vigne, découvrez le fruit que vous préférez sur une pâte.",
+            "ingredients": [
+                {
+                    "name": "Sucre",
+                    "qty": "300 g",
+                    "risk": "Non"
+                },
+                {
+                    "name": "Pêches",
+                    "qty": "18",
+                    "risk": "Oui"
+                }
+            ],
+            "image": "tartepeche.jpg",
+            "price": 18.9
+        },
+        {
+            "id": 7,
+            "name": "Tarte au chocolat",
+            "smallDescription": "Une tarte au sucre avec du chocolat.",
+            "longDescription": "La tarte au chocolat est un dessert ou une collation composés de chocolat noir, de crème et d'œufs, battus ensemble, versés dans une enveloppe de pâte sucrée et croustillante et cuits jusqu'à ce qu'ils soient fermes. Il est considéré comme une forme de tarte à la crème car il comprend une garniture à base d'œufs.",
+            "ingredients": [
+                {
+                    "name": "Sucre",
+                    "qty": "3 kg",
+                    "risk": "Oui"
+                },
+                {
+                    "name": "Chocolat",
+                    "qty": "200 g",
+                    "risk": "Non"
+                },
+                {
+                    "name": "Oeufs",
+                    "qty": "3",
+                    "risk": "Non"
+                },
+                {
+                    "name": "Crème",
+                    "qty": "1 L",
+                    "risk": "Non"
+                }
+            ],
+            "image": "chocolatepie.webp",
+            "price": 16.5
+        },
+        {
+            "id": 8,
+            "name": "Tarte crue nature",
+            "smallDescription": "Une tarte aérienne",
+            "longDescription": "En cuisine, la pâte brisée est une pâte servant de base aux tartes salées ou sucrées. Elle se caractérise par sa texture lisse et craquante, obtenue grâce au gluten et à l'amidon contenus dans la farine de blé. Sa préparation impose l'utilisation de beurre mou, celui-ci ne se mélangeant pas complètement à la farine. Le gluten pourra alors former avec l'eau un réseau élastique qui durcira à la cuisson. Si la préparation de la pâte ne permet pas la formation de cette croûte solide, elle est friable et sera plutôt dite sablée. Comme il n'y a pas de consensus sur la définition exacte, la pâte brisée désigne généralement une pâte composée principalement de farine et de matière grasse sans sucre.",
+            "ingredients": [
+                {
+                    "name": "Pâte brisée",
+                    "qty": "1",
+                    "risk": "Oui"
+                },
+                {
+                    "name": "Air",
+                    "qty": "1 L",
+                    "risk": "Non"
+                }
+            ],
+            "image": "rawpie.webp",
+            "price": 54.9
+        }
+    ],
+    "PieStore": [
+        {
+            "id": 1,
+            "city": "Bourg-en-Bresse",
+            "country": "France",
+            "latitude": 46.205167,
+            "longitude": 5.225501
+        },
+        {
+            "id": 2,
+            "city": "Paris",
+            "country": "France",
+            "latitude": 48.856614,
+            "longitude": 2.352222
+        },
+        {
+            "id": 3,
+            "city": "Limoges",
+            "country": "France",
+            "latitude": 45.833619,
+            "longitude": 1.261105
+        }
+    ]
   }
